@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github.com/nathanieladiah/intro-section](https://github.com/nathanieladiah/intro-section)
-- Live Site URL: [nathanieladiah.github.io/intro-section](https://nathanieladiah.github.io/intro-section)
+- Solution URL: [github.com/nathanieladiah/preview-cards](https://github.com/nathanieladiah/preview-cards)
+- Live Site URL: [nathanieladiah.github.io/preview-cards](https://nathanieladiah.github.io/preview-cards)
 
 ## My process
 
@@ -43,7 +43,6 @@ Users should be able to:
 - CSS custom properties
 - SCSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 First I created the design on xd.
