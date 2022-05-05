@@ -1,0 +1,114 @@
+@use '../abstracts/' as a;
+
+.page-wrapper {
+	min-height: 100vh;
+	background-color: var(--clr-gray);
+	padding: a.em(88) a.em(24);
+
+	@include a.breakpoint(medium) {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.preview-cards {
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	border-radius: 10px;
+
+	@include a.breakpoint(medium) {
+		flex-direction: row;
+		justify-content: center;
+		margin-inline: auto;
+		width: 70%;
+		max-width: a.rem(922);
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: a.em(123) a.em(50) a.em(48) a.em(50);
+	background-repeat: no-repeat;
+	background-position: top 3rem left 3rem;
+
+	&--sedan {
+		background-color: var(--clr-orange);
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		background-image: url(../images/icon-sedans.svg);
+
+		@include a.breakpoint(medium) {
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 10px;
+		}
+
+		.card__cta {
+			color: var(--clr-orange);
+		}
+	}
+
+	&--suv {
+		background-color: var(--clr-cyan);
+		background-image: url(../images/icon-suvs.svg);
+
+		.card__cta {
+			color: var(--clr-cyan);
+		}
+	}
+
+	&--luxury {
+		background-color: var(--clr-dark-cyan);
+		background-image: url(../images/icon-luxury.svg);	
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+
+		@include a.breakpoint(medium) {
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 10px;
+		}
+
+		.card__cta {
+			color: var(--clr-dark-cyan);
+		}
+	}
+
+	&__title {
+		font-family: var(--ff-serif);
+		text-transform: uppercase;
+		font-size: var(--fs-700);
+		font-weight: 700;
+		color: var(--clr-gray);
+		margin-bottom: a.em(10);
+	}
+
+	&__body {
+		line-height: 1.6;
+		max-width: 53ch;
+		margin-bottom: a.em(28);
+
+		@include a.breakpoint(medium) {
+			margin-bottom: a.em(50);
+		}
+	}
+
+	&__cta {
+		 padding: a.em(14) 2rem;
+		 background-color: var(--clr-gray);
+		 border-radius: 25px;
+		 text-decoration: none;
+		 align-self: flex-start;
+
+		 @include a.breakpoint(medium) {
+			 &:hover,
+			 &:focus {
+				 border: 2px solid var(--clr-gray);
+				 background-color: transparent;
+				 color: var(--clr-gray);
+			 }
+		 }
+	}
+}

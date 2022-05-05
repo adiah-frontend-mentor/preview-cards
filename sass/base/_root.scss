@@ -1,0 +1,39 @@
+@use '../abstracts/' as a;
+
+:root {
+
+	// colors
+	--clr-gray: hsl(0, 0%, 95%); //background, headings, buttons
+	--clr-white: hsla(0, 0%, 100%, 0.75); //paragraphs
+	// --clr-white: hsl(0 0 100 / .75);
+
+	--clr-orange: hsl(31, 77%, 52%);
+	--clr-cyan: hsl(184, 100%, 22%);
+	--clr-dark-cyan: hsl(179, 100%, 13%);
+
+
+
+	// font-families
+	--ff-sans: 'Lexend Deca', sans-serif;
+	--ff-serif: 'Big Shoulders Display', cursive;
+
+	// font-sizes from ../abstract/type
+	// Might need to add more breakpoints
+	// @each $screen-size, $font-size in a.$type-scale {
+	// 	@if $screen-size == small {
+	// 		@each $size, $value in $font-size {
+	// 			--fs-#{$size}: #{$value};
+	// 		}
+	// 	} @else {
+	// 		@include a.breakpoint(medium) {
+	// 			@each $size, $value in $font-size {
+	// 				--fs-#{$size}: #{$value};
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	@each $size, $value in a.$font-sizes {
+		--fs-#{$size}: #{$value};
+	}
+}
